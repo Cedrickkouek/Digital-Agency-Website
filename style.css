@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.5s;
+}
+
+body {
+    background-color: #000000;
+}
+
+.top header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    z-index: 100;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.top a {
+    text-decoration: none;
+}
+
+.top span {
+    color: aliceblue;
+}
+
+.navbar a {
+    margin-left: 55px;
+}
+
+.navbar span {
+    font-weight: 400;
+}
+
+.navbar a:hover {
+    padding: 5px 15px 5px 15px;
+    border: white 1px solid;
+    transition: 0.1s;
+    font-size: 15px;
+}
+
+.navbar a span:hover {
+    color: orange;
+    font-weight: 500;
+}
+
+.main {
+    display: flex;
+}
+
+.mainleft {
+    width: 50%;
+}
+
+.mainright {
+    width: 50%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 48vh;
+}
+
+.box {
+    position: relative;
+    width: 300px;
+    height: 48vh;
+}
+
+.box span {
+    position: absolute;
+    inset: 0;
+    transform: rotate(calc(45deg * var(--i)));
+}
+
+.main .text1 {
+    margin-top: 40px;
+    margin-left: 150px;
+    color: aliceblue;
+    letter-spacing: 4px;
+    font-size: 50px;
+    font-weight: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.main .text2 {
+    color: aliceblue;
+    margin-left: 150px;
+    margin-top: 7px;
+}
+
+.main .text1 span {
+    color: blue;
+}
+
+.proj {
+    align-items: center;
+    display: flex;
+    margin-top: 25px;
+}
+
+.line {
+    margin-top: 10px;
+    margin-left: 9px;
+    width: 35px;
+    border-bottom: 3px solid blue;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-bottom: 20px;
+}
+
+.bot1 {
+    margin-top: 90px;
+    margin-left: 20px;
+    height: 100px;
+    width: 250px;
+    background-color: #131313;
+    color: aliceblue;
+}
+
+.p1 {
+    font-weight: 500;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.hh {
+    margin-left: 10px;
+}
+
+.bot1 {
+    overflow: hidden;
+    z-index: 100;
+}
+
+.hide {
+    margin-top: 25px;
+    /* margin-left: 5px; */
+    text-align: center;
+}
+
+.bot1:hover {
+    height: 200px;
+    margin-top: -10px;
+}
+
+.p1:hover+.hide {
+    display: block;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.box span::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: url(./images/Off.svg);
+    background-size: cover;
+    background-position: center;
+    transform: translateX(-50%) translateY(-100px) scale(0.8);
+    animation: animate 2s linear infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes animate {
+
+    0%,
+    100% {
+        background: url(./images/Off.svg);
+    }
+
+    50% {
+        background: url(./images/On.svg);
+    }
+}
